@@ -1,11 +1,12 @@
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbarr"
+import "../styles/Home.css"
 
 export default function HomePage(){
     return (
         <>
         <Navbar />
         <h1>Internshala Internship portal</h1>
-        <p>Apply to Exciting Opportunities, Go to Opportunities Page</p>
+        <h1 className="light-sam">please visit our opportunities tab to check for opening...</h1>
         </>
     )
 }

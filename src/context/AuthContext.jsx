@@ -5,6 +5,7 @@ import setAuthToken from "../utils/setAuthToken";
 const AuthContext = createContext();
 
 // axios.defaults.baseURL = "https://projectappbackend.onrender.com";
+axios.defaults.baseURL = "https://backend-internship-portal-0kow.onrender.com";
 
 const AuthProvider = ({ children }) => {
   const [authState, setAuthState] = useState({
@@ -27,8 +28,7 @@ const AuthProvider = ({ children }) => {
       setAuthToken(localStorage.token);
     }
     try {
-      const res = await axios.get("http://localhost:8080/api/v1/user/");
-      console.log(res , "resp")
+      const res = await axios.get("api/v1/user/");
       setAuthState((prevState) => ({
         ...prevState,
         isAuthenticated: true, 
@@ -48,7 +48,7 @@ const AuthProvider = ({ children }) => {
 
   const register = async (formData) => {
     try {
-      const res = await axios.post("http://localhost:8080/api/v1/user/register", formData);
+      const res = await axios.post("api/v1/user/register", formData);
       setAuthState((prevState) => ({
         ...prevState,
         token: res.data.token,
@@ -67,7 +67,7 @@ const AuthProvider = ({ children }) => {
 
   const login = async (formData) => {
     try {
-      const res = await axios.post("http://localhost:8080/api/v1/user/login", formData);
+      const res = await axios.post("api/v1/user/login", formData);
       setAuthState((prevState) => ({
         ...prevState,
         token: res.data.token,

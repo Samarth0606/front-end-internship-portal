@@ -1,0 +1,9 @@
+.light-sam{
+    width: 60%;
+    font-weight: 200;
+    font-family: cursive;
+    border: 2px solid black;
+    margin: 10px auto;
+    background-color: lightgray;
+    box-shadow:  1px 1px 5px rgb(180, 178, 178) , 2px 2px 5px rgb(152, 151, 151) ;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbarr';
 import "../styles/RegisterPage.css"
 
 const RegisterPage = () => {
@@ -51,7 +51,9 @@ const RegisterPage = () => {
           <input type="password" name="password" value={password} onChange={onChange} required />
         </div>
         {error && <p className='error-message'>{error}</p>}
-        <button type="submit">Register</button>
+        <div className='buttonParent'>
+           <button className='registerButton' type="submit">Register</button>
+        </div>
       </form>
       </div>
     </div>

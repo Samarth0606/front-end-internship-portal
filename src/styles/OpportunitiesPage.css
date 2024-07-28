@@ -1,50 +1,114 @@
 /* OpportunitiesPage.css */
 
 .opportunities-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-    background-color: #f0f0f0;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  /* padding: 20px; */
+  background-color: #f2f2f2;
+}
+
+.opportunities-container {
+  max-width: 950px;
+  width: 100%;
+  background-color: #d8dfe1;
+  padding: 20px;
+  border-radius: 8px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* margin: 40px; */
+}
+
+
+h1 {
+  margin-top: 20px;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 15px auto;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: .5s ease-out;
+}
+
+ul:hover{
+  box-shadow:0 2px 4px 0 rgba(0, 0, 0, .08);
+}
+
+li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.companyName {
+  margin-bottom: 3px;
+  color: #8A8A8A;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  font-family: 'Inter var', sans-serif;
+}
+.jobDetails{
+  display: flex;
+  justify-content: start;
+  margin: 0;
+}
+.jobDetails p{
+  color: #333;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  cursor: text;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.startdate{
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #333;
+  font-family: Inter, sans-serif;
   
-  .opportunities-container {
-    max-width: 800px;
-    width: 100%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 50px;
-  }
+}
+
+.apply{
+  width: 20%;
+  margin: 5px auto;
+  padding: 3px 8px;
+  gap: 4px;
+  border-radius: 28px;
+  background: #fff;
+  border: 1px solid #76abee;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 13px;
   
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 10px;
-    margin: 15px;
-  }
-  
-  li {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-  }
-  
-  h2 {
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  
-  p {
-    margin-bottom: 5px;
-  }
-  
-  span {
-    margin-right: 5px;
-  }
-  
+}
+.apply a{
+  color: #4383d6;
+  text-decoration: none;
+}
+.apply:hover a{
+  background-color: #0056b3;
+  color: #fff;
+}
+
+
+span {
+  margin-right: 5px;
+}
