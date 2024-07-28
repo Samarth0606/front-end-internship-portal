@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -12,6 +12,7 @@ const ApplyPage = () => {
   const navigate = useNavigate();
   const { authState } = useContext(AuthContext);
   const { isAuthenticated, loading } = authState;
+  let [error , setError] = useState('')
 
   useEffect(() => {
     if (!isAuthenticated && !loading) {
@@ -24,6 +25,7 @@ const ApplyPage = () => {
       await axios.post(`/api/v1/opportunity/apply/${id}`);
       navigate('/opportunities');
     } catch (err) {
+      setError('Already applied for the Opening')
       console.error(err);
     }
   };
@@ -35,6 +37,7 @@ const ApplyPage = () => {
       <h1>Apply for Opportunity</h1>
       <p>Are you sure you want to apply for this opportunity?</p>
       <button className='applyButton' onClick={applyForOpportunity}>Apply</button>
+      {error ? <h3>{error}</h3>  : null}
     </div>
     </div>
   );
