@@ -5,6 +5,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbarr';
 import "../styles/ApplyPage.css"
 
+axios.defaults.baseURL = "https://backend-internship-portal-1.onrender.com";
+
 const ApplyPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -19,7 +21,7 @@ const ApplyPage = () => {
 
   const applyForOpportunity = async () => {
     try {
-      await axios.post(`http://localhost:8080/api/v1/opportunity/apply/${id}`);
+      await axios.post(`/api/v1/opportunity/apply/${id}`);
       navigate('/opportunities');
     } catch (err) {
       console.error(err);

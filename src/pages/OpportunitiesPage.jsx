@@ -8,6 +8,8 @@ import { CiLocationOn } from "react-icons/ci";
 import { FiBriefcase } from "react-icons/fi";
 import { CiMoneyCheck1 } from "react-icons/ci";
 
+axios.defaults.baseURL = "https://backend-internship-portal-1.onrender.com";
+
 const OpportunitiesPage = () => {
   const [opportunities, setOpportunities] = useState([]);
   const { authState } = useContext(AuthContext);
@@ -15,7 +17,7 @@ const OpportunitiesPage = () => {
 
   useEffect(() => {
     const fetchOpportunities = async () => {
-      const res = await axios.get('http://localhost:8080/api/v1/opportunity/');
+      const res = await axios.get('/api/v1/opportunity/');
       setOpportunities(res.data);
     };
     fetchOpportunities();
